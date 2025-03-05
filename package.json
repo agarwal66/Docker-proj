@@ -70,8 +70,9 @@
     "utils-merge": "^1.0.1",
     "vary": "^1.1.2"
   },
- "scripts": {
-  "start": "node src/app.js"
+"scripts": {
+  "start": "node index.js",
+  "test": "echo \"No tests available\" && exit 0"
 },
   "keywords": [],
   "author": "",
