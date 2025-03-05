@@ -57,13 +57,14 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Install Railway CLI
+           - name: Install Railway CLI
         run: |
           curl -fsSL cli.new | sh
           export PATH=$HOME/.railway/bin:$PATH
 
-            - name: Authenticate Railway CLI
-          run: railway login --service-token ${{ secrets.RAILWAY_TOKEN }}
+      - name: Authenticate Railway CLI
+        run: railway login --service-token ${{ secrets.RAILWAY_TOKEN }}
+
 
 
       - name: Deploy to Railway
