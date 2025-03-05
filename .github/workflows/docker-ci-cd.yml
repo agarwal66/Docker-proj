@@ -61,7 +61,7 @@ jobs:
           export PATH=$HOME/.railway/bin:$PATH
 
       - name: Authenticate Railway CLI
-        run: railway link ${{ secrets.RAILWAY_PROJECT_ID }}
+        run: railway login --service-token ${{ secrets.RAILWAY_TOKEN }}
 
       - name: Deploy to Railway
         run: railway up
