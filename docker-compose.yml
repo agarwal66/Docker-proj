@@ -3,5 +3,5 @@ services:
   weather-web:
     image: agarwal66/weather-web:latest
     ports:
-      - "3000:3000"
+      - "3000:8000"
     restart: always
