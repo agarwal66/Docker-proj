@@ -1,5 +1,5 @@
 node_modules
-npm-debug.log
 .git
-.DS_Store
 .env
+npm-debug.log
+docker-compose.yml

@@ -11,7 +11,7 @@
     "call-bind": "^1.0.7",
     "content-disposition": "^0.5.4",
     "content-type": "^1.0.5",
-    "cookie": "^0.5.0",
+    "cookie": "^1.0.2",
     "cookie-signature": "^1.0.6",
     "daemon": "^1.1.0",
     "debug": "^2.6.9",
@@ -58,7 +58,7 @@
     "raw-body": "^2.5.2",
     "safe-buffer": "^5.2.1",
     "safer-buffer": "^2.1.2",
-    "send": "^0.18.0",
+    "send": "^1.1.0",
     "serve-static": "^1.15.0",
     "set-function-length": "^1.2.2",
     "setprototypeof": "^1.2.0",
@@ -70,10 +70,10 @@
     "utils-merge": "^1.0.1",
     "vary": "^1.1.2"
   },
-"scripts": {
-  "start": "node index.js",
-  "test": "echo \"No tests available\" && exit 0"
-},
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"No tests available\" && exit 0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
