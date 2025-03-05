@@ -62,8 +62,9 @@ jobs:
           curl -fsSL cli.new | sh
           export PATH=$HOME/.railway/bin:$PATH
 
-      - name: Authenticate Railway CLI
-        run: railway api-key ${{ secrets.RAILWAY_TOKEN }}
+            - name: Authenticate Railway CLI
+        run: railway login --service-token ${{ secrets.RAILWAY_TOKEN }}
+
 
       - name: Deploy to Railway
         run: railway up --service weather-web
