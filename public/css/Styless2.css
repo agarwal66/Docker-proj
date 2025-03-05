@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --main-bg: #1e272e;
+  --main-color: #0097e6;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  height: 100vh;
+  display: flex;
+  overflow-x: hidden;
+  flex-direction: column;
+}
+.row {
+  margin: 0;
+}
+.main_menu {
+  background-color: var(--main-bg);
+}
+.navbar {
+  color: #fff;
+  background-color: var(--main-bg);
+  padding: 2rem 0;
+  margin-left: 2rem;
+}
+.navbar li {
+  margin-left: 3rem;
+
+  /* 2rem mtlb 20pixel */
+}
+.navbar a {
+  columns: #fff;
+  font-size: 1.8rem;
+  margin-left: 5rem;
+}
+.navbar a:hover {
+  color: var(--main-color);
+  margin-left: 5rem;
+}
+.navbar-toggler {
+  background-color: grey;
+  margin-left: 5rem;
+}
+.favicon-image {
+  width: 28px; /* Adjust size as needed */
+  height: 28px; /* Adjust size as needed */
+   
+  transition: all linear;
+  animation: rot 2s linear infinite;
+  color: var(--main-color); 
+}
+/* .fa-sun {
+  transition: all linear;
+  animation: rot 2s linear infinite;
+  color: var(--main-color);
+} */
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* main header */
+.main_header_left {
+  height: 70rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.main_header_left p {
+  font-weight: bolder;
+  font-size: 4rem;
+  color:#000;
+}
+.main_header_left h1 {
+  font-size: 4rem;
+  margin: 1rem 0 4rem 0;
+  font-weight: bolder;
+  text-transform: capitalize;
+  color:floralwhite;
+  /* color: var(--main-color); */
+}
+.main_header_left .text_clr {
+  color: var(--main-color);
+}
+.main_header_left button {
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  box-shadow: 0 8px 6px -6px #000;
+  outline: none;
+}
+.main_header_left button:hover {
+  box-shadow: 0 8px 6px -6px var(--main-color);
+}
+.main_header_right {
+  height: 70rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.main_header_right figure img {
+  filter: drop-shadow(0 0.3em 0.5rem rgba(0, 0, 0, 0.2));
+}
+
+/* extra site codee mine */
+#cityName {
+  color: #131415;
+  font-weight: bolder;
+}
+#temperature {
+  color: #0000006f;
+  font-weight: bolder;
+}
+#description {
+  color: #131415;
+  font-weight: bolder;
+}
+#humidity {
+  color: #0000006f;
+  font-weight: bolder;
+}
+#windSpeed {
+  color: #131415;
+  font-weight: bolder;
+}
+.countries {
+  margin-top: 20px;
+}
+
+.countries h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-weight: bolder;
+}
+
+.countries ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.countries li {
+  margin-right: 10px;
+}
+
+.countries a {
+  display: block;
+  background-color: #074252;
+  padding: 20px; /* Adjust padding */
+  border-radius: 5px;
+  text-decoration: none;
+  color: #d50f0f;
+  font-weight: bold;
+  text-align: center;
+  flex: 1;
+}
+
+.countries a:hover {
+  background-color: #dddddd;
+}
+/* Add background images for carousel items */
+.carousel-item:nth-child(1) {
+  background-image: url('../images/dj-nick-otronic-2AY5PayT0iM-unsplash.jpg');
+}
+.carousel-item:nth-child(2) {
+  background-image: url('../images/sherlock-p-toMPKhaJQTo-unsplash.jpg');
+}
+.carousel-item:nth-child(3) {
+  background-image: url('../images/datingscout-RlQ29vvbU2Q-unsplash.jpg');
+}
+/* Add more background images as needed */
+.carousel-item {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  z-index: -1; /* Send it to the back */
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
+
+}
+.image-slider-container {
+  width: 800px; /* Adjust as needed */
+  height: 300px; /* Adjust as needed */
+  overflow: hidden;
+  position: relative;
+}
+
+.image-slider-container .carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image-slider-container .carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.image-slider-container .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.image-slider-container .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire container */
+}
+#weatherData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bolder;
+  /* border: 2px solid #072b1a; */
+  border-radius: 20px;
+  background-color: gray;
+  padding: 20px;
+}
+
+#weatherData h2 {
+  margin: 1.9px;
+  font-size: xx-large;
+  color: #0e3929;
+  font-weight: bolder;
+}
+#location {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.location-icon {
+  display: inline-block;
+  height: 0.6em;
+  width: auto;
+  margin-right: 5px;
+}
+
+.weather-container {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+}
+
+.weather-icon img {
+  filter: drop-shadow(0 0 2px #0a0519);
+  width: 100%;
+}
+
+.weather-temp {
+  margin: 0;
+  font-weight: 700;
+  font-size: 4em;
+  color: #1b09bd;
+}
+
+.weather-desc {
+  margin: 0;
+  color: #080217;
+}
+
+/* Popular Cities */
+.countries {
+  margin-top: 20px;
+}
+.countries ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.countries li {
+  margin-right: 10px;
+  margin-left: 10px;
+  flex: 1;
+}
+
+.countries a {
+  display: block;
+  background-color: #7b7b7c;
+  padding: 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #080909d5;
+  font-weight: bold;
+  text-align: center;
+}
+
+.countries a:hover {
+  background-color: #85878a;
+}
+
+/* carsouel imagee css */
+
+#carouselExampleControls .carousel-item img {
+  /* Add your CSS properties here */
+  /* For example: */
+  width: 550px; /* Set width to 50% */
+  height: 35vh; /* Set height to 80% of viewport height */
+}
+
+/* footer code */
+footer {
+  width: 100%;
+  background-color: var(--main-bg);
+  margin-top: auto;
+  position: fixed;
+  height: 6rem;
+  left: 0;
+  bottom: 0;
+}
+footer p {
+  margin: 2px;
+  text-align: center;
+  color: #fff;
+  line-height: 3rem;
+  font-size: 1.4rem;
+}
+.weather-info {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+}
+/* responsive code */
+@media (max-width: 768px) {
+  .main_header_left {
+    height: auto;
+    margin: 5rem 0;
+  }
+  .main_header_right {
+    height: auto;
+    margin-top: 3rem;
+  }
+}
