@@ -46,12 +46,14 @@ jobs:
           docker tag agarwalprateek666/weather-web:latest agarwalprateek666/weather-web:v1
           docker push agarwalprateek666/weather-web:latest
           docker push agarwalprateek666/weather-web:v1
-
   deploy:
     needs: docker
     runs-on: ubuntu-latest
 
     steps:
+      - name: Disable SSL Verification
+        run: git config --global http.sslVerify false
+
       - name: Checkout Repository
         uses: actions/checkout@v3
 
