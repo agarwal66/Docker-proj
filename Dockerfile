@@ -20,4 +20,5 @@ WORKDIR /app/src
 EXPOSE 8000
 
 # Run the application
+WORKDIR /app
 CMD ["node", "src/app.js"]
